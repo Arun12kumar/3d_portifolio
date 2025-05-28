@@ -15,7 +15,7 @@ const HeroExperience = () => {
 
       <OrbitControls enablePan={false} enableZoom={!isTablet} maxDistance={20} minDistance={10} minPolarAngle={Math.PI / 5} maxPolarAngle={Math.PI / 2} />
       <HeroLights/>
-      <Particles count={1000}/>
+      <Particles count={500}/>
       <group scale={isMobile? 0.7 : 1} position={[0,-3.5,0]} rotation={[0, -Math.PI /4, 0]}>
         <Room />
       </group>
