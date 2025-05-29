@@ -1,57 +1,81 @@
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 
 const Particles = ({ count = 200 }) => {
-  const mesh = useRef();
-
-  const particles = useMemo(() => {
-    const temp = [];
+  const particles = useRef();
+  
+  // Initialize particles with random positions and velocities
+  const particlesData = useMemo(() => {
+    const data = new Float32Array(count * 4); // x, y, z, speed
     for (let i = 0; i < count; i++) {
-      temp.push({
-        position: [
-          (Math.random() - 0.5) * 10,
-          Math.random() * 10 + 5, // higher starting point
-          (Math.random() - 0.5) * 10,
-        ],
-        speed: 0.005 + Math.random() * 0.001,
-      });
+      const i4 = i * 4;
+      // Position
+      data[i4] = (Math.random() - 0.5) * 20; // x
+      data[i4 + 1] = Math.random() * 15 + 5; // y (start above)
+      data[i4 + 2] = (Math.random() - 0.5) * 20; // z
+      // Speed
+      data[i4 + 3] = 0.01 + Math.random() * 0.02;
     }
-    return temp;
+    return data;
   }, [count]);
 
-  useFrame(() => {
-    const positions = mesh.current.geometry.attributes.position.array;
+  // Create initial positions buffer
+  const positions = useMemo(() => {
+    const pos = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      let y = positions[i * 3 + 1];
-      y -= particles[i].speed;
-      if (y < -2) y = Math.random() * 10 + 5;
-      positions[i * 3 + 1] = y;
+      const i4 = i * 4;
+      const i3 = i * 3;
+      pos[i3] = particlesData[i4];
+      pos[i3 + 1] = particlesData[i4 + 1];
+      pos[i3 + 2] = particlesData[i4 + 2];
     }
-    mesh.current.geometry.attributes.position.needsUpdate = true;
-  });
+    return pos;
+  }, [count, particlesData]);
 
-  const positions = new Float32Array(count * 3);
-  particles.forEach((p, i) => {
-    positions[i * 3] = p.position[0];
-    positions[i * 3 + 1] = p.position[1];
-    positions[i * 3 + 2] = p.position[2];
+  // Animation loop
+  useFrame(() => {
+    if (!particles.current) return;
+    
+    const positions = particles.current.geometry.attributes.position.array;
+    
+    for (let i = 0; i < count; i++) {
+      const i4 = i * 4;
+      const i3 = i * 3;
+      
+      // Update Y position based on speed
+      positions[i3 + 1] -= particlesData[i4 + 3];
+      
+      // Reset particle when it falls below threshold
+      if (positions[i3 + 1] < -5) {
+        positions[i3] = (Math.random() - 0.5) * 20;
+        positions[i3 + 1] = Math.random() * 5 + 15;
+        positions[i3 + 2] = (Math.random() - 0.5) * 20;
+      }
+    }
+    
+    particles.current.geometry.attributes.position.needsUpdate = true;
+    particles.current.rotation.y += 0.0005; // Slow rotation
   });
 
   return (
-    <points ref={mesh}>
-      <bufferGeometry>
+    <points ref={particles}>
+      <bufferGeometry attach="geometry">
         <bufferAttribute
           attach="attributes-position"
-          count={count}
+          count={positions.length / 3}
           array={positions}
           itemSize={3}
         />
       </bufferGeometry>
       <pointsMaterial
-        color="#ffffff"
-        size={0.05}
-        transparent
-        opacity={0.9}
+        attach="material"
+        size={0.08}
+        color="#4cc9f0"
+        sizeAttenuation={true}
+        transparent={true}
+        opacity={0.8}
+        alphaTest={0.01}
         depthWrite={false}
       />
     </points>
