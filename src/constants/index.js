@@ -32,3 +32,36 @@ export const logoIconsList =[
     {imagePath:"/images/logos/company-logo-10.png",name:"company-logo-10"},
     {imagePath:"/images/logos/company-logo-11.png",name:"company-logo-11"},
 ];
+
+export const abilities = [
+  {
+    imagPath: "/images/seo.png",
+    title: "Quality Focus",
+    desc: "We never compromise on quality — every detail is crafted with precision to exceed expectations.",
+  },
+  {
+    imagPath: "/images/chat.png",
+    title: "Reliable Communication",
+    desc: "Clear, consistent updates and quick responses — so you're always in the loop, every step of the way.",
+  },
+  {
+    imagPath: "/images/time.png",
+    title: "On-Time Delivery",
+    desc: "Deadlines matter. We deliver on schedule, every time — without sacrificing quality.",
+  },
+];
+
+export const expCards =[
+    {
+        review:"",
+        imgPath:"/images/exp1.png",
+        logoPath:"/images/logo1.png",
+        title:"Frontend Developer",
+        date:"January 2023 - Present",
+        responsibilities:[
+            "Developed and maintained",
+            "Collabrates closely with UI/UX designers",
+            "Optimized web application"
+        ]
+    }
+];
