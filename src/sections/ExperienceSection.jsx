@@ -8,7 +8,7 @@ const ExperienceSection = () => {
         <Titleheader title="Professional Work Experience" sub="My Career Overview"/>
         <div className='mt-32 relative'>
           <div className='relative z-50 xl:space-y-32 space-y-10'>
-            {}
+            hallo
           </div>
         </div>
       </div>
