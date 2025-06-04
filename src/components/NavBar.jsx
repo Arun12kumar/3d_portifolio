@@ -32,17 +32,7 @@ const NavBar = () => {
             ))}
           </ul>
         </nav>
-        <nav className='flex items-center lg:hidden'>
-          <ul className='flex flex-row gap-2'>
-            {navLinks.map(({link,name}) =>(
-              <li key={name} className='text-white-50 relative'>
-                <a href={link}>
-                  <span className='transition-colors duration-300 hover:text-white text-sm'>{name}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+
         <a href="#contact" className='contact-btn group' >
           <div className='inner'>
             <span>Contact</span>
