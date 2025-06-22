@@ -57,13 +57,13 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#ffefdb]">
-                <img src="/images/project2.png" alt="Library_management" />
+                <img src="images/project2.png" alt="Library_management" />
               </div>
               <h2>Library Management Platform</h2>
             </div>
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/project3.png" alt="YC_directory" />
+                <img src="images/project3.png" alt="YC_directory" />
               </div>
               <h2>YC Directory - A Startup Showcase App</h2>
             </div>
