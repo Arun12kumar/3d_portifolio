@@ -1,8 +1,8 @@
 
 
 export const words = [
-  { text: "Ideas", imagPath: "/images/ideas.svg" },
-  { text: "Concepts", imagPath: "/images/concepts.svg" },
+  { text: "Ideas", imagPath: "public/images/ideas.svg" },
+  { text: "Concepts", imagPath: "public/images/concepts.svg" },
 ];
 
 export const counterItems = [
