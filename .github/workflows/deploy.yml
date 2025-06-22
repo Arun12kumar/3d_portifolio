@@ -5,6 +5,9 @@ on:
     branches:
       - main   # trigger on push to main
 
+permissions:
+  contents: write  # IMPORTANT: needed for pushing to gh-pages      
+
 jobs:
   build:
     runs-on: ubuntu-latest
