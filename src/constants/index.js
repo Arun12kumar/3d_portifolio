@@ -53,15 +53,61 @@ export const abilities = [
 
 export const expCards = [
   {
-    review: "",
+    review: "Built a strong foundation in electronics and communication, which enabled logical problem-solving and analytical thinking crucial for full stack development.",
     imgPath: "images/exp1.png",
     logoPath: "images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    title: "B.Tech in Electronics and Communication",
+    company: "Govt. College of Engineering, Kannur",
+    date: "2018 - 2022",
     responsibilities: [
-      "Developed and maintained",
-      "Collabrates closely with UI/UX designers",
-      "Optimized web application"
+      "Completed coursework in computer networks, microprocessors, and logic design.",
+      "Worked on mini projects with embedded systems and basic web scripting.",
+      "Developed technical writing and collaborative project skills.",
+      "Maintained CGPA: 6.4 under APJ Abdul Kalam Technological University."
+    ]
+  },
+  {
+    review: "Completed an intensive hands-on Python Full Stack Developer course covering both frontend and backend technologies.",
+    imgPath: "images/exp2.png",
+    logoPath: "images/logo2.png",
+    title: "Python Full Stack Developer Trainee",
+    company: "Aesthetix Edu-Tech, Ernakulam",
+    date: "2023 - 2024",
+    responsibilities: [
+      "Mastered frontend skills: HTML5, CSS3, JavaScript (ES6+), React, Bootstrap.",
+      "Learned backend development using Django and REST framework.",
+      "Built real-time mini projects including a Task App and Weather App.",
+      "Worked on Git/GitHub for version control and deployment."
+    ]
+  },
+  {
+    review: "Built robust MERN stack applications for clients and internal use cases, optimized for performance and scalability.",
+    imgPath: "images/exp3.png",
+    logoPath: "images/logo3.png",
+    title: "Full Stack Developer",
+    company: "Datavalley Webservice, Kochi",
+    date: "December 2024 – Present",
+    responsibilities: [
+      "Developed RESTful APIs using Node.js and Express.js.",
+      "Integrated frontend (React + TypeScript) with backend services.",
+      "Created scalable databases in MongoDB and MySQL.",
+      "Handled Postman API testing and documentation.",
+      "Managed deployment via AWS and participated in team-wide Git workflows."
+    ]
+  },
+  {
+    review: "Led and mentored a small development team while managing end-to-end project architecture and delivery.",
+    imgPath: "images/exp1.png",
+    logoPath: "images/logo1.png",
+    title: "Full Stack Team Leader",
+    company: "Datavalley Webservice, Kochi",
+    date: "May 2025 – Present",
+    responsibilities: [
+      "Guided junior developers in code quality and best practices.",
+      "Oversaw full project lifecycle: design, development, deployment.",
+      "Conducted code reviews and introduced TypeScript standards.",
+      "Led sprint planning and maintained communication with clients.",
+      "Improved app performance and reduced API response time by 35%."
     ]
   }
 ];
