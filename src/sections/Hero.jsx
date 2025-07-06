@@ -61,7 +61,7 @@ const Hero = () => {
         {/* right 3D model */}
         <figure>
           <div className="hero-3d-layout">
-           //<HeroExperience />
+            {/*<HeroExperience />*/}
           </div>
         </figure>
       </div>
