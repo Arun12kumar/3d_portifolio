@@ -6,10 +6,10 @@ export const words = [
 ];
 
 export const counterItems = [
-  { value: 10, suffix: "+", label: "Year of Experience" },
-  { value: 16, suffix: "+", label: "Year of Satisfied Clients" },
-  { value: 20, suffix: "+", label: "Complete Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 3, suffix: "+", label: "Year of Experience" },
+  { value: 5, suffix: "+", label: "Working Projects" },
+  { value: 6, suffix: "+", label: "Complete Projects" },
+  { value: 99, suffix: "%", label: "Success Rate" },
 ];
 
 export const navLinks = [
@@ -97,4 +97,24 @@ export const expCards = [
       "Improved app performance and reduced API response time by 35%."
     ]
   }
+];
+
+
+export const skillslogo = [
+  {skilllogo:"images/vite.png"},
+  {skilllogo:"images/tailwindcss.png"},
+  {skilllogo:"images/figma.png"},
+  {skilllogo:"images/git.png"},
+  {skilllogo:"images/html.png"},
+  {skilllogo:"images/js.png"},
+  {skilllogo:"images/java.png"},
+  {skilllogo:"images/python.png"},
+  {skilllogo:"images/react-query.png"},
+  {skilllogo:"images/mysql.png"},
+  {skilllogo:"images/aws.png"},
+  {skilllogo:"images/github.png"},
+  {skilllogo:"images/social.png"},
+  {skilllogo:"images/atom.png"},
+  {skilllogo:"images/redis.png"},
+
 ];
