@@ -52,20 +52,7 @@ export const abilities = [
 ];
 
 export const expCards = [
-  {
-    review: "Built a strong foundation in electronics and communication, which enabled logical problem-solving and analytical thinking crucial for full stack development.",
-    imgPath: "images/exp1.png",
-    logoPath: "images/logo1.png",
-    title: "B.Tech in Electronics and Communication",
-    company: "Govt. College of Engineering, Kannur",
-    date: "2018 - 2022",
-    responsibilities: [
-      "Completed coursework in computer networks, microprocessors, and logic design.",
-      "Worked on mini projects with embedded systems and basic web scripting.",
-      "Developed technical writing and collaborative project skills.",
-      "Maintained CGPA: 6.4 under APJ Abdul Kalam Technological University."
-    ]
-  },
+  
   {
     review: "Completed an intensive hands-on Python Full Stack Developer course covering both frontend and backend technologies.",
     imgPath: "images/exp2.png",
