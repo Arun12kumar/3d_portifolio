@@ -116,5 +116,6 @@ export const skillslogo = [
   {skilllogo:"images/social.png"},
   {skilllogo:"images/atom.png"},
   {skilllogo:"images/redis.png"},
+  {skilllogo:"images/css-3.png"},
 
 ];

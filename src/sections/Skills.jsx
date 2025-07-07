@@ -8,10 +8,10 @@ const Skills = () => {
                 title="My Skills"
                 sub="Skills i have"
             />
-            <div className="card-border mx-3 my-15 p-3 rounded-md flex gap-3">
+            <div className="card-border mx-3 my-15 p-3 rounded-md grid grid-cols-4 md:flex gap-3">
                 {skillslogo.map((logo, index) => (
-                    <div key={index} className="card-border p-3 rounded-md w-18 h-18 flex justify-center items-center">
-                        <img src={logo.skilllogo} alt="logo"/>
+                    <div key={index} className="card-border p-3 rounded-md w-full h-18 flex justify-center items-center bg-gray-200">
+                        <img src={logo.skilllogo} alt="logo" className="max-w-full h-auto" />
                     </div>
                 ))}
             </div>
