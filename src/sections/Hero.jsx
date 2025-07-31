@@ -61,8 +61,8 @@ const Hero = () => {
         {/* right 3D model */}
         <figure>
           <div className="hero-3d-layout flex justify-center items-center">
-            {/*<HeroExperience />*/}
-            <img src="images/image.png" alt="" style={{width:"inherit"}}/>
+            <HeroExperience />
+            {/* <img src="images/image.png" alt="" style={{width:"inherit"}}/> */}
           </div>
         </figure>
       </div>
